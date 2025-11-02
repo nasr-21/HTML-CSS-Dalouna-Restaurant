@@ -1,0 +1,466 @@
+/* 
+ css/styles.css 
+ Student Name: Nasserallah Abdelrahman Asad Salhi
+ Student Id: 12428281
+*/
+
+:root {
+    --bg: #faf7f2;
+    --text: hwb(0 12% 88%);
+    --muted: #6b6b6b;
+    --brand: #216869;
+    --brand-2: #49a078;
+    --card: #ffffff;
+    --border: #e9e3db;
+}
+
+/* 345 */
+body {
+    margin: 0;
+    font-family: "Rubik", sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(250, 246, 241);
+    color: #6b6b6b;
+    padding: 10px 40px;
+
+}
+
+.logo a {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #216869;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6b6b6b;
+    list-style: none;
+    font-weight: 750;
+
+}
+
+.hero {
+    height: 345px;
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    mix-blend-mode: normal;
+    pointer-events: none;
+    /* مهم */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+}
+
+
+.kicker {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    border: solid rgb(74, 161, 120) 3px;
+    border-radius: 40px;
+    padding: 2px;
+    font-size: 13px;
+    font-weight: 900;
+    background-color: rgb(74, 161, 120);
+    color: rgb(5, 61, 52);
+}
+
+h1 {
+    font-weight: 900;
+}
+
+.btn {
+    z-index: 4;
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    /* شكل دائري جميل */
+    background-color: rgb(33, 104, 105);
+    /* لون الزر */
+    color: #fff;
+    /* نص أبيض */
+    text-decoration: none;
+    font-weight: 800;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    transition: transform .12s ease, box-shadow .12s ease;
+
+}
+
+.lead {
+    font-size: large;
+}
+
+.boxes-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding: 0 60px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.box-1,
+.box-2 {
+    width: 690px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(235, 234, 232) 1px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.box-1 h2,
+.box-2 h2 {
+    font-weight: 800;
+    font-size: 30px;
+    margin: 0 0 15px 0;
+}
+
+.box-1 .section-2,
+.box-2 .section-2 {
+    color: rgb(129, 129, 129);
+    line-height: 1.5;
+    font-size: small;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .boxes-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .box-1,
+    .box-2 {
+        width: 100%;
+    }
+}
+
+.uls li {
+    display: inline-block;
+    list-style: none;
+    font-size: small;
+    border: 1px rgb(233, 233, 233) solid;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-right: 5px;
+
+}
+
+
+
+
+.Three-boxes {
+    padding: 60px 0;
+}
+
+.menu-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+
+.all-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.first-box,
+.second-box,
+.third-box {
+    border: solid rgb(235, 234, 232) 1px;
+    border-radius: 20px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+.all-boxes h2 {
+    font-weight: 900;
+    font-size: x-large;
+    margin-bottom: 30px;
+}
+
+.menu-wrapper h2 {
+    font-weight: 900;
+    font-size: 1.9rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item,
+.dish-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.menu-item .dish-price {
+
+    color: rgb(47, 99, 103);
+    font-size: rem;
+}
+
+.all-boxes p {
+    color: rgb(157, 157, 157);
+    font-weight: 600;
+}
+
+.all-boxes hr {
+    opacity: 0.2;
+    border-top: dotted 2px;
+}
+
+.menu-note p {
+    font-size: 0.85rem;
+    text-align: left;
+    color: rgb(172, 171, 165);
+    font-weight: 700;
+}
+
+
+
+
+#hours {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+
+
+.hours-reserve {
+    max-width: 1400px;
+    margin: 10px auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hours-box,
+.contact {
+    height: 270px;
+    border: solid 1px rgb(235, 234, 232);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.hours-reserve h2 {
+    font-weight: 800;
+    font-size: 1.8rem;
+
+}
+
+.hours-list {
+    padding-left: 0;
+}
+
+.hours-list li {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.hours-list .day {
+    font-weight: 500;
+}
+
+.hours-list hr {
+    opacity: 0.3;
+    border-top: dotted 1px;
+}
+
+.contact .email {
+    font-weight: 600;
+    color: rgb(136, 161, 166);
+}
+
+.contact .reserve {
+    font-weight: 600;
+    color: rgb(136, 161, 166);
+}
+
+.contact .tel {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.hi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.find-us-section {
+    max-width: 1400px;
+    margin: 10px auto;
+    padding: 0 60px;
+}
+
+.find-us-info {
+    border: solid 1px rgb(235, 234, 232);
+    border-radius: 20px;
+    margin: 100px 0;
+    padding: 40px;
+    background-color: white;
+    height: 240px;
+}
+
+.find-us-info h2 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 0 0 20px 0;
+}
+
+.find-us-info .address {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+
+.find-us-info .parking-info {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.map {
+    background-image: url('../images/map.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin: 100px 0;
+    height: 320px;
+    border: solid 1px rgb(235, 234, 232);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .find-us-section {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+.hr2 {
+    opacity: 0.3;
+}
+
+.footer-content,
+.name-number {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px auto;
+    color: rgb(109, 107, 103);
+    font-weight: 700;
+}
+
+.name-number {
+    text-decoration: none;
+}
+
+
+@media (max-width: 1200px) {
+
+    .navbar,
+    .section-container,
+    .menu-wrapper,
+    .hours-reserve,
+    .find-us-section,
+    .site-footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 968px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .boxes-container,
+    .all-boxes,
+    .hours-reserve,
+    .find-us-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+}
